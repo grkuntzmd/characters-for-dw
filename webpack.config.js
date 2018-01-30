@@ -39,9 +39,6 @@ module.exports = {
                     "style-loader",
                     "css-loader"
                 ]
-            }, {
-                test: /\.scss$/,
-                loaders: ["style-loader", "css-loader", "sass-loader"]
             }
         ],
 
@@ -55,8 +52,8 @@ module.exports = {
 
     plugins: [
         new CopyWebpackPlugin([
-            { from: "src/favicon.png" },
-            { from: "src/logo.svg" }
+            { from: "src/index.html" },
+            { from: "src/Sword.png" }
         ]),
         new UglifyJsPlugin({
             cache: true,
